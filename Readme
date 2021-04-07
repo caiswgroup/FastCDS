@@ -1,0 +1,20 @@
+How to build:
+    make clean && make
+
+How to use:
+    ./fastCDS [--opt_name=value] <input-ins>
+
+e.g.,
+    ./fastCDS --seed=1 --cutoff_time=3600 --for_small_ins=0 dir_ins
+
+options:
+    seed : random seed
+    cutoff_time : cutoff time in second for fastCDS
+    print_gap : show the current best solution when there are print_gap second left
+    for_small_ins : when solve classic instance, please set it to 1, which only use SUB.
+
+Output:
+    The 'c' line : the comments.
+    The 'o' line : the current best solution, in the format of "o current_best_soln found_time found_steps found_restart"
+    The 's' line : the best solution fastCDS found before cutoff_time, in the format of "s best_soln found_time"
+    
